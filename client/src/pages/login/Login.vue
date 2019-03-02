@@ -38,8 +38,9 @@ export default {
             let {model} = this.$refs[formName]
             console.log(model.username);
             console.log(model.password);
-            this.$ajax.post(
-                '/api/admin',
+
+            this.$ajax.get(
+                '/api/user',
                 model
             ).then(function (res) {
                 console.log(res);
